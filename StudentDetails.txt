@@ -1,0 +1,28 @@
+using System;
+
+namespace Day_3
+{
+	class Student
+	{
+		public int StudentRollNo{get; set;}
+		public string StudentName{get; set;}
+	}
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			Student student = new Student();
+			Console.WriteLine("Please enter student roll number");
+			student.StudentRollNo = Convert.ToInt32(Console.ReadLine());
+			
+			Console.WriteLine("Please enter student name");
+			student.StudentName = Console.ReadLine();
+			
+			Console.WriteLine("Student Details are : ");
+			Console.WriteLine("Student Roll no. : "+student.StudentRollNo);
+			Console.WriteLine("Student Name : "+student.StudentName);
+			
+			Console.ReadLine();
+		}
+	}
+}

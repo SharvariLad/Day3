@@ -1,0 +1,36 @@
+using System;
+
+namespace Day_3
+{
+	class Student
+	{
+		public int StudentRollNo;
+		public string StudentName;
+		public Student(Student stdnt)//Declaring Copy Constructor
+		{
+			StudentRollNo = stdnt.StudentRollNo;
+			StudentName = stdnt.StudentName;
+		}
+		public Student(int StudentRollNo, string StudentName)//Parametrised constructor
+		{
+			this.StudentRollNo = StudentRollNo;
+			this.StudentName = StudentName;
+		}
+	public void PrintStudentDetails()
+	{
+		Console.WriteLine("Student Details are : ");
+		Console.WriteLine("Student Roll no. : "+StudentRollNo);
+		Console.WriteLine("Student Name : "+StudentName);
+	}
+	}
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			Student stdnt1 = new Student(30,"Sharvari Lad");
+			Student stdnt2 = new Student(stdnt1);
+			stdnt2.PrintStudentDetails();
+			Console.ReadLine();
+		}
+	}
+}
